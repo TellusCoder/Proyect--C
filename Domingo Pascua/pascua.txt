@@ -1,0 +1,219 @@
+.......................................................................................................................................................................
+Laboratorio # 4
+Pseudocodigo
+Victor Cerrud
+1Ls201
+.......................................................................................................................................................................
+
+Algoritmo  DomingoResurreccion
+{
+   //Bloque declarativo de constantes
+    M = 24;
+    N = 5;
+   // Bloque declarativo de variables
+   enetero anio, a, b, c, d, e, dia, mes ;
+
+   // Bloque de instrucciones 
+   imprimir ("Ingrese un  año para calcular el domingo pascua ");
+   leer (anio);
+   
+   si ( anio >= 1900 Y anio <= 2099 )
+    {
+
+    // Formulas  para saber el dia del domingo de pascua
+
+		a = anio mod 19 ;
+		b = anio mod 4 ;
+		c = anio mod 7 ;
+		d = (19 * a + 24) mod 30 ;
+		e = (2 * b + 4 * c + 6 * d + 5) mod 7 ;
+
+       si ( d + e < 10 )
+        {
+         
+         // Bloque instrucciones 
+           dia = d + e + 22  ;
+	     mes = 3 ;
+        }
+        
+       de otro modo 
+        {
+
+        // Bloque instrucciones 
+           dia = d + e - 9 ;
+	     mes = 4 ;
+        }
+
+      segun ( mes) hacer
+
+        caso  3:
+        //formula para calcular el año bisiesto.
+         si (( anio mod 4 == 0 Y anio mod 100 != 0) O (anio mod 400 == 0) O (anio mod 100==0))
+          {
+           
+           // Bloque instrucciones 
+            imprimir ("El domingo de Pascua es : " ,dia, " de marzo del ", anio ); 
+            imprimir ("y es un  año bisiesto. ");
+           }
+         de otro modo 
+           { 
+              
+            // Bloque instrucciones 
+             imprmir("El domingo de pascua es :", dia, " de marzo del ", anio);
+             imprimir("y no es un año bisiesto.");
+            }
+
+             salir;
+
+        Por defecto:
+         // expeciones especiales  para el mes de abril  segun wikipedia
+          si  (dia == 26 )
+            {
+            // Bloque instrucciones 
+              dia = 19 ;
+            }
+          de otro modo
+             si (dia == 25  Y d == 28 Y e== 6 Y a > 10)
+               {
+               // Bloque instrucciones  
+                 dia = 18;
+               }
+
+        // formula para calcular el año bisiesto.
+         si (( anio mod 4 == 0 Y anio mod 100 != 0) O (anio mod 400 == 0) O (anio mod 100==0))
+           
+           {
+             // Bloque instrucciones 
+            imprimir("El domingo de pascua es : ",dia, " de abril del ",anio);
+            imprmir ("y es un año bisiesto.");
+           }
+         de otro modo 
+
+           {
+             // Bloque instrucciones 
+            imprimir("El domingo de pascua es : ",dia, " de abril del ",anio);
+            imprmir ("y no es un año bisiesto.");
+           }
+
+           salir;
+   }
+   de otro modo
+
+      {
+        imprimir ("No ingreso correctamente el año. ");
+
+     }
+
+    imprimir ("Fin del programa");
+
+}
+
+
+
+.......................................................................................................................................................................
+Codigo en C
+.......................................................................................................................................................................
+
+// Laboratorio # 4
+// Problema: Dado un entero que representa el año ( es de 4 cifras), determinar que día es domingo de pascua, y si es bisiesto.
+// Algoritmo  DomingoResurreccion
+
+#include <stdio.h>
+
+// constante magicas
+#define M = 24
+#define N = 5
+
+int main ()
+{
+    // Bloque declarativo de variable
+    int anio, a, b, c, d, e, dia, mes ;
+
+     // Bloque instrucciones 
+    // El usuario debe Ingrese  un año
+    printf("\nIngrese un  anio para calcular el domingo pascua\n ");
+    scanf ("%d", &anio) ;
+
+    // Controlar lo que introduce  el usuario
+    if ( anio >= 1900 && anio <= 2099 )  
+    {
+// Formulas  para saber el dia del domingo de pascua
+		a = anio % 19 ;
+		b = anio % 4 ;
+		c = anio % 7 ;
+		d = (19 * a + 24) % 30 ;
+		e = (2 * b + 4 * c + 6 * d + 5) % 7 ;
+// Para decir cual es dia  de acuerdo al año introducido 
+		
+    if ( d + e < 10 )
+    {
+        // Bloque instrucciones 
+        dia = d + e + 22  ;
+		mes = 3 ;
+    }
+    else
+    {
+        // Bloque instrucciones 
+        dia = d + e - 9 ;
+		mes = 4 ;
+    }
+    
+     switch (mes)
+    {
+     case 3:
+     //formula para calcular el año bisiesto.
+         if (( anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0) || (anio % 100==0)) 
+         {
+             // Bloque instrucciones 
+            printf ("El domingo de Pascua es : %d de marzo del %d " ,dia, anio); 
+            printf ("y es un  anio bisiesto.\n ");
+         }
+         else
+         {
+             // Bloque instrucciones 
+             printf ("El domingo de pascua es : %d de marzo del %d " ,dia, anio);
+             printf ("y no es un anio bisiesto.\n ");
+         }
+         break;
+
+     default:
+        // expeciones especiales  para el mes de abril  segun wikipedia 
+        if (dia == 26 )
+         {
+            // Bloque instrucciones 
+         dia = 19 ;
+         }
+     
+        else if (dia == 25  && d == 28 && e== 6 && a > 10)
+         {
+            // Bloque instrucciones  
+         dia = 18;
+         }
+        // formula para calcular el año bisiesto.
+         if (( anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0) || (anio % 100==0))
+         {
+             // Bloque instrucciones 
+            printf ("El domingo de pascua es : %d de abril del %d " ,dia, anio);
+            printf ("y es un anio bisiesto.\n");
+         }
+         else
+         {
+             // Bloque instrucciones 
+             printf ("El domingo de pascua es : %d de abril del %d " ,dia, anio);
+             printf ("y no es un anio bisiesto.\n");
+         }
+
+         break;
+       } 
+
+    }
+     else
+     {
+         printf ("No ingreso correctamente el anio.\n");
+     }
+
+    printf ("Fin del programa\n\n") ;  
+   
+ return 0;
+
+}

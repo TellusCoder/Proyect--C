@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588750465 source:c:\users\home\documents\proyectos en c\descuento en compras\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

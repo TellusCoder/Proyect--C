@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1589340283 source:c:\users\home\documents\proyectos en c\alternamulti\main.c
+	<stdio.h>
+	<stdlib.h>
+

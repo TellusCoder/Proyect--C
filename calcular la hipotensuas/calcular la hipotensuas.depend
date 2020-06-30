@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588840151 source:c:\users\home\documents\proyectos en c\calcular la hipotensuas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

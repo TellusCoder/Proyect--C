@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1588748802 source:c:\users\home\documents\calificacion materia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1588792717 source:c:\users\home\documents\proyectos en c\calificacion materia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
