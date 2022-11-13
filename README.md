@@ -29,8 +29,11 @@ pacman -S gcc
 pacman -S development
 
 verificar : 
+
 gcc --version
+
 g++ --version
+
 gdb --version
 
 https://code.visualstudio.com/docs/cpp/config-mingw
