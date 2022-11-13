@@ -19,10 +19,15 @@ https://www.msys2.org/
 install of package
 
 pacman -Syu
+
 pacman -S base-devel gcc vim cmake
+
 pacman -S base-devel
+
 pacman -S gcc
+
 pacman -S development
+
 verificar : 
 gcc --version
 g++ --version
