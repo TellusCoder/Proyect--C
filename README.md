@@ -18,6 +18,8 @@ https://www.msys2.org/
 
 install of package
 
+https://www.devdungeon.com/content/install-gcc-compiler-windows-msys2-cc
+
 pacman -Syu
 
 pacman -S base-devel gcc vim cmake
