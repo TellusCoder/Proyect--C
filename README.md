@@ -2,7 +2,7 @@
 Proyecto de la universidad  en Lenguaje C
 
 
-Proyect of university in language C
+University Project in Language C
 
 code::block 
 
