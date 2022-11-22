@@ -13,6 +13,12 @@ MinGW  and Msys2
 installation of MinGw
 https://sourceforge.net/projects/mingw-w64/
 
+https://sourceforge.net/projects/mingw-w64/files/mingw-w64/
+
+MinGW - Minimalist GNU for Windows
+
+https://sourceforge.net/projects/mingw/files/latest/download
+
 installation of Msys2
 https://www.msys2.org/
 
